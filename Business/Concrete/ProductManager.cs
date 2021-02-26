@@ -34,12 +34,12 @@ namespace Business.Concrete
         public IDataResult<List<Product>> GetAll()
         {
             //İş kodları
-            if (DateTime.Now.Hour==22)
+            if (DateTime.Now.Hour == 1)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductsListed);
-             
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
+
         }
 
         public IDataResult<List<Product>> GetAllByCategoryId(int id)
