@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Core.Aspacts.Autofac.Validation
 {
-    public class ValidationAspect : MethodInterception
+    public class ValidationAspect : MethodInterception  // Aspact Methodun başında sonunda hata verecek yapıdır
     {
         private Type _validatorType;
         public ValidationAspect(Type validatorType)
